@@ -1,0 +1,16 @@
+aiortc
+pyserial
+pyserial-asyncio
+numpy
+aiohttp
+soundcard
+inputs
+pynmea2
+nose
+aiounittest
+coverage
+pytest
+pytest-asyncio
+pytest-aiohttp
+pytest-cov
+pytest-timeout
