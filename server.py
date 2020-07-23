@@ -136,6 +136,8 @@ async def guiHandler(request):
 
                     let offer = await conn.getLocalDescription();
 
+                    console.log("posting offer");
+
                     // POST the information to https://rtcbot.dev/InventoTest12
                     let response = await fetch("/%s", {
                         method: "POST",
@@ -143,10 +145,12 @@ async def guiHandler(request):
                         body: JSON.stringify(offer)
                     });
 
+                    console.log("received response");
+
                     await conn.setRemoteDescription(await response.json());
 
                     console.log("Ready!");
-                };
+                }
 
                 var mybutton = document.querySelector("#mybutton");
                 mybutton.onclick = function() {

@@ -34,7 +34,7 @@ def onMessage(msg):  # Called when each message is sent
 # Connect establishes a websocket connection to the server,
 # and uses it to send and receive info to establish webRTC connection.
 async def connect():
-    ws = Websocket("https://2d2dda3cbc5e.ngrok.io/InventoTest12")
+    ws = Websocket("https://82796db29997.ngrok.io/InventoTest12")
     remoteDescription = await ws.get()
     robotDescription = await conn.getLocalDescription(remoteDescription)
     ws.put_nowait(robotDescription)
